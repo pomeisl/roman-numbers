@@ -29,7 +29,7 @@ class RomanNumberConverterTest {
 	}
 
 	@Test
-	void testDoesNotConvertNegatives() {
+	void testDoesNotConvertNonpositive() {
 		var exception = assertThrows(NumberFormatException.class, () -> converter.convert(-1));
 		assertEquals("Roman numbers cannot be nonpositive.", exception.getMessage());
 	}
